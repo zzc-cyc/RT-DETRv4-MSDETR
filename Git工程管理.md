@@ -19,13 +19,12 @@
 
 ### 进行中
 
-* 正在将初始化后的项目推送到 GitHub 仓库 `https://github.com/zzc-cyc/RT-DETRv4-MSDETR.git`。
-* 本机未安装 GitHub CLI `gh`，本次发布使用原生 Git 命令完成。
+* GitHub 仓库已建立远程跟踪：`origin/main`。
+* 本机未安装 GitHub CLI `gh`，本次发布使用原生 Git 命令完成；后续若要创建 PR 或管理 Issue，建议安装并登录 `gh`。
 
 ### 待完成
 
-* 推送完成后记录提交哈希和远程分支。
-* 首次提交前再次运行暂存区大文件检查，确认没有误纳入权重或数据集。
+* 后续进入 MrDETR/MSDETR 融合实验前，基于 `main` 新建实验分支。
 * 后续每次实验结束后，将关键 `log.txt`、`console_train.log`、对比分析文档纳入版本管理；不要提交 `.pth`、COCO 图片/标注、预训练权重和压缩包。
 
 ## 跟踪策略
@@ -64,3 +63,20 @@ git check-ignore -v "RT-DETRv4\RT-DETRv4-main\outputs\rtv4_hgnetv2_s_coco\last.p
 ```powershell
 git check-ignore -v "RT-DETRv4\RT-DETRv4-main\outputs\rtv4_hgnetv2_s_coco\console_train.log"
 ```
+
+## 2026-05-22 GitHub 发布记录
+
+### 已完成
+
+* 已创建初始化提交：`a51e409`，提交信息为 `Initialize RT-DETRv4 MSDETR workspace`。
+* 已添加远程仓库：`origin = https://github.com/zzc-cyc/RT-DETRv4-MSDETR.git`。
+* 已推送 `main` 到 `origin/main`，并建立本地分支跟踪关系。
+* 推送前已验证暂存区无 `10MB` 以上文件，且无权重、COCO 数据集、预训练、checkpoint、压缩包和 `dinov3` junction 重复路径。
+
+### 进行中
+
+* 当前 `main` 分支作为项目初始基线。
+
+### 待完成
+
+* 后续新增融合代码时，建议从 `main` 新建功能分支，例如 `msdetr/fusion-prototype`。
