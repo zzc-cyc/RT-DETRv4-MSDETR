@@ -1,0 +1,38 @@
+Traceback (most recent call last):
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\train.py", line 50, in <module>
+    main(args)
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\train.py", line 36, in main
+    solver.fit()
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\solver\det_solver.py", line 21, in fit
+    self.train()
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\solver\solver.py", line 54, in train
+    self.train_dataloader = dist.warp_loader(self.cfg.train_dataloader, \
+                                             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_config.py", line 84, in train_dataloader
+    self._train_dataloader = create('train_dataloader')
+                             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 92, in create
+    return create(name)
+           ^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 139, in create
+    cls_kwargs[k] = create(_type)
+                    ^^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 92, in create
+    return create(name)
+           ^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 139, in create
+    cls_kwargs[k] = create(_type)
+                    ^^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 92, in create
+    return create(name)
+           ^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\core\yaml_utils.py", line 148, in create
+    return cls(**cls_kwargs)
+           ^^^^^^^^^^^^^^^^^
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\data\transforms.py", line 60, in __init__
+    transfom = getattr(GLOBAL_CONFIG[name]['_pymodule'], name)(**op)
+                       ~~~~~~~~~~~~~^^^^^^
+KeyError: 'SanitizeBoundingBox'
+D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\..\src\solver\det_engine.py:77: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:836.)
+  if not math.isfinite(loss_value):

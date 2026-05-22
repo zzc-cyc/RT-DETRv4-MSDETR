@@ -1,0 +1,82 @@
+# Python caches and local runtime artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Virtual environments and local IDE/editor state
+.venv/
+venv/
+env/
+.env
+.env.*
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local agent/browser/runtime state
+.claude/
+.playwright-cli/
+console/_tmp_console_test_output/
+console/_console_server*.log
+
+# Local junction to the shared DINOv3 source tree; track DINOv3/dinov3-main instead.
+RT-DETRv4/RT-DETRv4-main/dinov3/
+
+# Large archives and downloaded packages
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Datasets: keep code/config docs, do not track external dataset payloads
+RT-DETR/RT-DETR-main/rtdetr_pytorch/dataset/
+RT-DETR/RT-DETR-main/rtdetrv2_pytorch/dataset/
+RT-DETR/RT-DETR-main/rtdetr_paddle/dataset/
+RT-DETRv4/RT-DETRv4-main/dataset/
+RT-DETRv4/RT-DETRv4-main/datasets/
+MrDETR/Mr.DETR-main/datasets/
+
+# Model weights, pretrained files, checkpoints and exported models
+**/weights/
+**/pretrain/
+**/checkpoint/
+**/checkpoints/
+*.pth
+*.pt
+*.pdparams
+*.pdopt
+*.onnx
+*.engine
+*.trt
+*.pkl
+*.npy
+*.npz
+
+# Training/evaluation outputs: keep logs and lightweight metadata, exclude heavy result files.
+**/runs/
+**/wandb/
+**/tensorboard/
+**/events.out.tfevents*
+**/eval/
+**/eval.pth
+**/*.pid
+
+# Training logs are reproducibility evidence and should be tracked when useful.
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+~$*

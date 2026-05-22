@@ -1,0 +1,21 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 51616)
+Traceback (most recent call last):
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\socketserver.py", line 691, in process_request_thread
+    self.finish_request(request, client_address)
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\socketserver.py", line 361, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\socketserver.py", line 755, in __init__
+    self.handle()
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\http\server.py", line 436, in handle
+    self.handle_one_request()
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\http\server.py", line 424, in handle_one_request
+    method()
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\training_dashboard.py", line 443, in do_GET
+    self._send_json(read_status(self.config))
+  File "D:\研究生\代码复现\RT-DETR-main\rtdetr_pytorch\tools\training_dashboard.py", line 425, in _send_json
+    self.wfile.write(payload)
+  File "D:\anaconda\envs\rtdetr_5070ti\Lib\socketserver.py", line 834, in write
+    self._sock.sendall(b)
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
